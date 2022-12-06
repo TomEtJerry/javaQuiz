@@ -47,7 +47,7 @@ public abstract class Quiz implements ActionListener{ // class Quiz
     //une dans question et l'autre dans choix, qui est sous la forme: bonneRep rep1 rep2 rep 3 rep4
     public static int nbAleatoire(){
         ThreadLocalRandom tlr = ThreadLocalRandom.current(); //chercher question aleatoire
-        return tlr.nextInt(0, 25 + 1); //donne num aleatoire entre 1 et 4
+        return tlr.nextInt(0, 5 + 1); //donne num aleatoire entre 1 et 4
     }
 
     public static String recherche_quest(int nbr){
