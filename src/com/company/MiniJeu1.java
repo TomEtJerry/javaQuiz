@@ -91,7 +91,7 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R,0), "R_pressed");
         bouton4.getActionMap().put("R_pressed", buttonPressed);
 
-        boutonMenu.setBounds(HEIGHT/10, HEIGHT/10*4, WIDTH/10, WIDTH/10);
+        boutonMenu.setBounds(HEIGHT/10, HEIGHT/10*4, WIDTH/10*2, WIDTH/10);
         boutonMenu.setFont(new Font("MV BOLI",Font.ITALIC,35));
         boutonMenu.setFocusable(false); //pas faire surbriller le bouton qd on clique
         boutonMenu.addActionListener(buttonPressed);
