@@ -1,5 +1,6 @@
 package com.company;
 
+import javax.sound.midi.VoiceStatus;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -9,8 +10,11 @@ import java.util.Objects;
 
 
 public class Menu implements ActionListener {
-    static final int HEIGHT = 1080;
-    static final int WIDTH = 1920;
+    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    Dimension screenSize = toolkit.getScreenSize();
+
+    int HEIGHT = (int) screenSize.getHeight();
+    int WIDTH = (int) screenSize.getWidth();
 
     JFrame frame= new JFrame(); //cadre graphique
 
@@ -18,31 +22,20 @@ public class Menu implements ActionListener {
 
 
     JLabel logo = new JLabel();
-    JLabel g1 = new JLabel();
-    JLabel g2 = new JLabel();
-    JLabel g3 = new JLabel();
-    JLabel g4 = new JLabel();
-    JLabel g5 = new JLabel();
-    JLabel g6 = new JLabel();
-    JLabel g7 = new JLabel();
-    JLabel g8 = new JLabel();
 
 
     Menu(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cadre
         frame.setSize(WIDTH,HEIGHT); //taille du cadre
-        frame.getContentPane().setBackground(new Color(65, 153, 187)); //couleur de fond
+        //frame.getContentPane().setBackground(new Color(65, 153, 187)); //couleur de fond
         frame.setLayout(null); //pour pas que ca bouge selon taille de l'ecran
         frame.setResizable(false); //on peut pas modifier taille fenetre
 
-        String lepath = "";
-
-        logo.setBounds(430, 100, 300, 300);
-        Icon FMS = new ImageIcon(new ImageIcon(lepath + "icon.PNG").getImage().getScaledInstance(200, 200, Image.SCALE_DEFAULT));
-        logo.setIcon(FMS);
-
         
-        
+
+        logo.setBounds(0, 0, WIDTH, HEIGHT);
+        Icon FMS = new ImageIcon(new ImageIcon("quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
+        logo.setIcon(FMS);  
 
 
         boutonPrincipal.setBounds(500, 600, 500, 100);
@@ -52,9 +45,10 @@ public class Menu implements ActionListener {
         boutonPrincipal.getInputMap(javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW).
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A,0), "A_pressed");
         boutonPrincipal.getActionMap().put("A_pressed", buttonPressed);
+        boutonPrincipal.setBackground(Color.CYAN);
 
         frame.add(boutonPrincipal);
-        frame.add(logo);frame.add(g1); frame.add(g2);frame.add(g3);frame.add(g4);frame.add(g5);frame.add(g6);frame.add(g7);frame.add(g8);
+        frame.add(logo);
         frame.setVisible(true);
 
 

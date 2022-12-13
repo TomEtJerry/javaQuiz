@@ -7,6 +7,12 @@ import java.awt.event.ActionListener;
 import java.util.Objects;
 
 public class MiniJeu1 extends Quiz{
+    Toolkit toolkit = Toolkit.getDefaultToolkit();
+    Dimension screenSize = toolkit.getScreenSize();
+
+    int HEIGHT = (int) screenSize.getHeight();
+    int WIDTH = (int) screenSize.getWidth();
+
     protected Joueur [] joueurs; //tableau de joueurs: 0,1,2,3
     protected int nbAleatoire;
     protected String[] tabChoix;
@@ -31,12 +37,12 @@ public class MiniJeu1 extends Quiz{
 
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cadre
-        frame.setSize(1920,1080); //taille du cadre
+        frame.setSize(WIDTH,HEIGHT); //taille du cadre
         frame.getContentPane().setBackground(new Color(153,255,204)); //couleur de fond
         frame.setLayout(null); //pour pas que ca bouge selon taille de l'ecran
         frame.setResizable(false); //on peut pas modifier taille fenetre
 
-        textField.setBounds(0,0,1920,50);
+        textField.setBounds(0,0,WIDTH,50);
         textField.setBackground(new Color(255,204,153));
         textField.setForeground(new Color(102,0,51)); //couleur texte
         textField.setFont(new Font("Century Schoolbook",Font.BOLD,30)); //reglages police
@@ -53,7 +59,7 @@ public class MiniJeu1 extends Quiz{
         textArea.setBorder(BorderFactory.createBevelBorder(1));  //mettre des bords
         textArea.setEditable(false); //l'utilisateur peut pas changer les tailles
 
-        bouton1.setBounds(200,150,150,150);
+        bouton1.setBounds(HEIGHT/10, HEIGHT/10*2, WIDTH/12, WIDTH/12);
         bouton1.setFont(new Font("MV BOLI",Font.ITALIC,35));
         bouton1.setFocusable(false); //pas faire surbriller le bouton qd on clique
         bouton1.addActionListener(buttonPressed);
@@ -61,7 +67,7 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A,0), "A_pressed");
         bouton1.getActionMap().put("A_pressed", buttonPressed);
 
-        bouton2.setBounds(200,350,150,150);
+        bouton2.setBounds(HEIGHT/10, HEIGHT/10*4, WIDTH/12, WIDTH/12);
         bouton2.setFont(new Font("MV BOLI",Font.ITALIC,35));
         bouton2.setFocusable(false); //pas faire surbriller le bouton qd on clique
         bouton2.addActionListener(buttonPressed);
@@ -69,7 +75,7 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z,0), "Z_pressed");
         bouton2.getActionMap().put("Z_pressed", buttonPressed);
 
-        bouton3.setBounds(200,550,150,150);
+        bouton3.setBounds(HEIGHT/10, HEIGHT/10*6, WIDTH/12, WIDTH/12);
         bouton3.setFont(new Font("MV BOLI",Font.ITALIC,35));
         bouton3.setFocusable(false); //pas faire surbriller le bouton qd on clique
         bouton3.addActionListener(buttonPressed);
@@ -77,7 +83,7 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E,0), "E_pressed");
         bouton3.getActionMap().put("E_pressed", buttonPressed);
 
-        bouton4.setBounds(200,750,150,150);
+        bouton4.setBounds(HEIGHT/10, HEIGHT/10*8, WIDTH/12, WIDTH/12);
         bouton4.setFont(new Font("MV BOLI",Font.ITALIC,35));
         bouton4.setFocusable(false); //pas faire surbriller le bouton qd on clique
         bouton4.addActionListener(buttonPressed);
@@ -85,7 +91,7 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R,0), "R_pressed");
         bouton4.getActionMap().put("R_pressed", buttonPressed);
 
-        boutonMenu.setBounds(200,150,150,150);
+        boutonMenu.setBounds(HEIGHT/10, HEIGHT/10*4, WIDTH/10, WIDTH/10);
         boutonMenu.setFont(new Font("MV BOLI",Font.ITALIC,35));
         boutonMenu.setFocusable(false); //pas faire surbriller le bouton qd on clique
         boutonMenu.addActionListener(buttonPressed);
@@ -93,28 +99,29 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A,0), "A_pressed");
         boutonMenu.getActionMap().put("A_pressed", buttonPressed);
         boutonMenu.addActionListener(e -> {frame.dispose(); Menu q = new Menu();});
+        boutonMenu.setText("MENU (A)");
 
-        rep1.setBounds(425,175,1000,100);
+        rep1.setBounds(WIDTH/10*2, WIDTH/10, HEIGHT,WIDTH/12);
         rep1.setBackground(new Color(255,153,153));
         rep1.setForeground(new Color(0,153,76));
         rep1.setFont(new Font("MV Boli",Font.PLAIN,70));
 
-        rep2.setBounds(425,375,1000,100);
+        rep2.setBounds(WIDTH/10*2, WIDTH/10*2+20, HEIGHT,WIDTH/12);
         rep2.setBackground(new Color(255,153,153));
         rep2.setForeground(new Color(0,153,76));
         rep2.setFont(new Font("MV Boli",Font.PLAIN,70));
 
-        rep3.setBounds(425,572,1000,100);
+        rep3.setBounds(WIDTH/10*2, WIDTH/10*3+40, HEIGHT,WIDTH/12);
         rep3.setBackground(new Color(255,153,153));
         rep3.setForeground(new Color(0,153,76));
         rep3.setFont(new Font("MV Boli",Font.PLAIN,70));
 
-        rep4.setBounds(425,775,1000,100);
+        rep4.setBounds(WIDTH/10*2, WIDTH/10*4+60, HEIGHT,WIDTH/12);
         rep4.setBackground(new Color(255,153,153));
         rep4.setForeground(new Color(0,153,76));
         rep4.setFont(new Font("MV Boli",Font.PLAIN,70));
 
-        secondes_restantes.setBounds(1500,390,300,300);
+        secondes_restantes.setBounds(WIDTH/4*3,390,300,300);
         secondes_restantes.setBackground(new Color(255,153,204));
         secondes_restantes.setForeground(new Color(255,204,229));
         secondes_restantes.setFont(new Font("Ink Free",Font.BOLD,100));
@@ -123,7 +130,7 @@ public class MiniJeu1 extends Quiz{
         secondes_restantes.setHorizontalAlignment(JTextField.CENTER);
         secondes_restantes.setText(String.valueOf(secondes)); //convertir entier en string
 
-        temps.setBounds(1500,290,300,100);
+        temps.setBounds(WIDTH/4*3,290,300,100);
         temps.setBackground(new Color(255,153,204));
         temps.setForeground(new Color(255,0,0));
         temps.setFont(new Font("Ink Free",Font.PLAIN,50));
@@ -131,7 +138,7 @@ public class MiniJeu1 extends Quiz{
         temps.setText("Timer");
 
         //après la partie, affichage score+pourcentage
-        bonnes_reponses.setBounds(710,200,450,300);
+        bonnes_reponses.setBounds(WIDTH/5*2,200,450,300);
         bonnes_reponses.setBackground(new Color(153,191,255));
         bonnes_reponses.setForeground(new Color(153,153,255));
         bonnes_reponses.setFont(new Font("Ink Free",Font.BOLD,100));
@@ -139,7 +146,7 @@ public class MiniJeu1 extends Quiz{
         bonnes_reponses.setHorizontalAlignment(JTextField.CENTER);
         bonnes_reponses.setEditable(false);
 
-        pourcentage.setBounds(710,500,450,300);
+        pourcentage.setBounds(WIDTH/5*2,500,450,300);
         pourcentage.setBackground(new Color(153,191,255));
         pourcentage.setForeground(new Color(229,204,255));
         pourcentage.setFont(new Font("Ink Free",Font.BOLD,100));
