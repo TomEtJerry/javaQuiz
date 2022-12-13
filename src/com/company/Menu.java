@@ -47,6 +47,11 @@ public class Menu implements ActionListener {
         boutonPrincipal.getActionMap().put("A_pressed", buttonPressed);
         boutonPrincipal.setBackground(Color.CYAN);
 
+        JTextField textField = new JTextField();
+        textField.setBounds(500, 300, 500, 100);
+        frame.add(textField);
+        String text = textField.getText();
+
         frame.add(boutonPrincipal);
         frame.add(logo);
         frame.setVisible(true);
