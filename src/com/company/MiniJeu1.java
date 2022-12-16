@@ -99,7 +99,7 @@ public class MiniJeu1 extends Quiz{
                 put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A,0), "A_pressed");
         boutonMenu.getActionMap().put("A_pressed", buttonPressed);
         boutonMenu.addActionListener(e -> {frame.dispose(); Menu q = new Menu();});
-        boutonMenu.setText("MENU (A)");
+        boutonMenu.setText("MENU");
 
         rep1.setBounds(WIDTH/10*2, WIDTH/10, HEIGHT,WIDTH/12);
         rep1.setBackground(new Color(255,153,153));

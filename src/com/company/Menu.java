@@ -31,27 +31,25 @@ public class Menu implements ActionListener {
         frame.setLayout(null); //pour pas que ca bouge selon taille de l'ecran
         frame.setResizable(false); //on peut pas modifier taille fenetre
 
-        
+
 
         logo.setBounds(0, 0, WIDTH, HEIGHT);
         Icon FMS = new ImageIcon(new ImageIcon("quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
         logo.setIcon(FMS);  
 
 
-        boutonPrincipal.setBounds(500, 600, 500, 100);
-        boutonPrincipal.setText("Appuyer sur A pour démarrer");
-        //boutonPrincipal.addActionListener(e -> {frame.dispose(); Quiz q = new MiniJeu1();});
+        boutonPrincipal.setBounds(WIDTH/2-250, HEIGHT/2+150, 500, 100);
+        boutonPrincipal.setText("Cliquer pour démarrer");
         boutonPrincipal.addActionListener(buttonPressed);
-        boutonPrincipal.getInputMap(javax.swing.JComponent.WHEN_IN_FOCUSED_WINDOW).
-                put(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A,0), "A_pressed");
-        boutonPrincipal.getActionMap().put("A_pressed", buttonPressed);
         boutonPrincipal.setBackground(Color.CYAN);
 
         JTextField textField = new JTextField();
-        textField.setBounds(500, 300, 500, 100);
-        frame.add(textField);
+        textField.setBounds(WIDTH/2-250, HEIGHT/4, 500, 100);
+        textField.setText("nom d'utilisateur");
+        textField.setFont(new Font("Serif", Font.BOLD, 30));
         String text = textField.getText();
 
+        frame.add(textField);
         frame.add(boutonPrincipal);
         frame.add(logo);
         frame.setVisible(true);
