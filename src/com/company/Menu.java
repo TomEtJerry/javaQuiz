@@ -1,7 +1,5 @@
 package com.company;
 
-import javax.lang.model.element.Element;
-import javax.sound.midi.VoiceStatus;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -20,6 +18,8 @@ public class Menu implements ActionListener {
     JButton boutonPrincipal =new JButton(); //bouton pour jouer
 
     JLabel logo = new JLabel();
+
+    
 
     Menu(){
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cadre
