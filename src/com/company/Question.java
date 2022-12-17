@@ -40,10 +40,12 @@ public class Question {
                 new String []{"rep A", "rep B", "rep C", "rep D"},"Question 1 ? ");
         questions[3] = new Question(3, 1, "rep D",
                 new String []{"rep A", "rep B", "rep C", "rep D"},"Question 1 ? ");
-        questions[4] = new Question(4, 1, "rep A",
-                new String []{"rep A", "rep B", "rep C", "rep D"},"Question 1 ? ");
+        questions[4] = new Question(7, 1, "Un modèle qui permet de créer des objets avec des propriétés et des comportements communs",
+                new String []{"Un type de données qui permet de stocker des informations", "Un modèle qui permet de créer des objets avec des propriétés et des comportements communs", "Un fichier qui contient du code Java", "n package qui regroupe des classes et des interfaces"},"Qu'est-ce qu'une classe en Java ? ");
         questions[5] = new Question(8, 1, "une erreur",
                 new String []{"3", "3.141592653589793", "0.141592653589793", "une erreur"},"Que renvoie (int)math.PI ? ");
+
+        
 
         return questions[nbr_aleatoire];
 
