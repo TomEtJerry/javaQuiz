@@ -42,9 +42,8 @@ public class Question {
                 new String []{"rep A", "rep B", "rep C", "rep D"},"Question 1 ? ");
         questions[4] = new Question(4, 1, "rep A",
                 new String []{"rep A", "rep B", "rep C", "rep D"},"Question 1 ? ");
-        questions[5] = new Question(5, 1, "rep B",
-                new String []{"rep A", "rep B", "rep C", "rep D"},"Question 1 ? ");
-        
+        questions[5] = new Question(8, 1, "une erreur",
+                new String []{"3", "3.141592653589793", "0.141592653589793", "une erreur"},"Que renvoie (int)math.PI ? ");
 
         return questions[nbr_aleatoire];
 
