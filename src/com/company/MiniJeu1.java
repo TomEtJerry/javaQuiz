@@ -10,6 +10,8 @@ public class MiniJeu1 extends Quiz{
     Toolkit toolkit = Toolkit.getDefaultToolkit();
     Dimension screenSize = toolkit.getScreenSize();
 
+    String nickName;
+
     int HEIGHT = (int) screenSize.getHeight();
     int WIDTH = (int) screenSize.getWidth();
 
@@ -28,13 +30,14 @@ public class MiniJeu1 extends Quiz{
         }
     });
 
-    MiniJeu1(){
+    MiniJeu1(String name){
         rep_correctes=0;
         nb_quest= 5;
         secondes=10;
         position=0;
         tabChoix=new String[4];
 
+        nickName = name;
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //cadre
         frame.setSize(WIDTH,HEIGHT); //taille du cadre
@@ -58,6 +61,12 @@ public class MiniJeu1 extends Quiz{
         textArea.setFont(new Font("MV Boli",Font.BOLD,50)); //reglages police
         textArea.setBorder(BorderFactory.createBevelBorder(1));  //mettre des bords
         textArea.setEditable(false); //l'utilisateur peut pas changer les tailles
+
+        nck.setBounds(WIDTH/10, WIDTH/20, HEIGHT,WIDTH/12);
+        nck.setBackground(new Color(255,153,153));
+        nck.setForeground(new Color(0,153,76));
+        nck.setFont(new Font("MV Boli",Font.PLAIN,30));
+        nck.setText("Joueur : "+ name);
 
         bouton1.setBounds(HEIGHT/10, HEIGHT/10*2, WIDTH/12, WIDTH/12);
         bouton1.setFont(new Font("MV BOLI",Font.ITALIC,35));
@@ -156,6 +165,7 @@ public class MiniJeu1 extends Quiz{
 
         //ajout à l'ecran:
         frame.add(textField); frame.add(textArea);
+        frame.add(nck);
         frame.add(bouton1); frame.add(bouton2); frame.add(bouton3); frame.add(bouton4);
         frame.add(rep1); frame.add(rep2); frame.add(rep3); frame.add(rep4);
         frame.add(secondes_restantes); frame.add(temps);
@@ -282,6 +292,7 @@ public class MiniJeu1 extends Quiz{
         resultat= (int)((rep_correctes/(double)nb_quest)*100);
         textField.setText("RESULTATS !");
         textArea.setText("");
+        nck.setText("");
         rep1.setText("");
         rep2.setText("");
         rep3.setText("");
