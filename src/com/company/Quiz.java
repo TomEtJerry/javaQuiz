@@ -20,6 +20,8 @@ public abstract class Quiz implements ActionListener{ // class Quiz
     JTextField textField= new JTextField(); //question actuelle
     JTextArea textArea= new JTextArea();//cadre pour la question
 
+    JLabel nck= new JLabel();
+
     JButton bouton1 =new JButton(); //les 4 choix de bouton
     JButton bouton2 =new JButton();
     JButton bouton3 =new JButton();

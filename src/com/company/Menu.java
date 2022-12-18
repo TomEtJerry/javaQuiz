@@ -13,6 +13,8 @@ public class Menu implements ActionListener {
     int HEIGHT = (int) screenSize.getHeight();
     int WIDTH = (int) screenSize.getWidth();
 
+    String nickName;
+
     JFrame frame= new JFrame(); //cadre graphique
 
     JButton boutonPrincipal =new JButton(); //bouton pour jouer
@@ -27,45 +29,40 @@ public class Menu implements ActionListener {
         //frame.getContentPane().setBackground(new Color(65, 153, 187)); //couleur de fond
         frame.setLayout(null); //pour pas que ca bouge selon taille de l'ecran
         frame.setResizable(false); //on peut pas modifier taille fenetre
-
-
-
+    
+        // add the text field and button for the name
+        JTextField nameField = new JTextField();
+        nameField.setBounds(WIDTH/2-250, HEIGHT/4, 500, 100);
+        frame.add(nameField);
+    
+        JButton boutonA = new JButton("JOUER");
+        boutonA.setBounds(WIDTH/2-250, HEIGHT/2+150, 500, 100);
+        boutonA.setBackground(Color.CYAN);
+        boutonA.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name = nameField.getText();
+                if (name.isEmpty()) {
+                    JOptionPane.showMessageDialog(frame, "Merci d'entrer votre nom.", "Erreur", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    nickName = name;
+                    frame.dispose();
+                    System.out.println("Je sais que vous êtes " + name);
+                    Quiz q = new MiniJeu1(name);
+                }
+            }
+        });
+        frame.add(boutonA);
+    
         logo.setBounds(0, 0, WIDTH, HEIGHT);
         Icon FMS = new ImageIcon(new ImageIcon("quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
         logo.setIcon(FMS);  
-
-
-        boutonPrincipal.setBounds(WIDTH/2-250, HEIGHT/2+150, 500, 100);
-        boutonPrincipal.setText("Cliquer pour démarrer");
-        boutonPrincipal.addActionListener(buttonPressed);
-        boutonPrincipal.setBackground(Color.CYAN);
-
-        JTextField textField = new JTextField();
-        textField.setBounds(WIDTH/2-250, HEIGHT/4, 500, 100);
-        textField.setText("nom d'utilisateur");
-        textField.setFont(new Font("Serif", Font.BOLD, 30));
-        String text = textField.getText();
-
-        frame.add(textField);
-        frame.add(boutonPrincipal);
+    
+        
         frame.add(logo);
         frame.setVisible(true);
-
-
-        }
-
-
-    @Override
+    }
+    @Override//pour ne pas avoir d'erreur dans l'implémentation d'Actionlistener
     public void actionPerformed(ActionEvent e) {
     }
-    AbstractAction buttonPressed = new AbstractAction() {
-        @Override
-        public void actionPerformed(ActionEvent e) { //pour les clics de souris, existe deja
-            System.out.println(e.getActionCommand());
-
-            //quel bouton est cliqué:
-            if(e.getSource()==boutonPrincipal){frame.dispose(); Quiz q = new MiniJeu1();}
-
-        }
-    };
 }
