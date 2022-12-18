@@ -30,6 +30,8 @@ public class MiniJeu1 extends Quiz{
         }
     });
 
+    MiniJeu1(){}
+
     MiniJeu1(String name){
         rep_correctes=0;
         nb_quest= 5;
