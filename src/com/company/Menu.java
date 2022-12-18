@@ -73,7 +73,7 @@ public class Menu implements ActionListener {
                     nickName = name;
                     frame.dispose();
                     System.out.println("Je sais que vous êtes " + name);
-                    Quiz q = new MiniJeu1(name);
+                    Quiz q = new MiniJeu2(name);
                 }
             }
         });

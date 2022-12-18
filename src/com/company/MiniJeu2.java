@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
 
-public class MiniJeu1 extends Quiz{
+public class MiniJeu2 extends Quiz{
     Toolkit toolkit = Toolkit.getDefaultToolkit();
     Dimension screenSize = toolkit.getScreenSize();
 
@@ -30,9 +30,9 @@ public class MiniJeu1 extends Quiz{
         }
     });
 
-    MiniJeu1(){}
+    MiniJeu2(){}
 
-    MiniJeu1(String name){
+    MiniJeu2(String name){
         rep_correctes=0;
         nb_quest= 8;
         secondes=15;
@@ -184,7 +184,7 @@ public class MiniJeu1 extends Quiz{
             resultats(); //si on a fait toute les questions, on affiche le résultat
         }
         else{
-            nbAleatoire = Quiz.nbAleatoire(1);
+            nbAleatoire = Quiz.nbAleatoire(2);
             
             textField.setText("Question "+(position+1)); 
             textArea.setText(recherche_quest(nbAleatoire));
