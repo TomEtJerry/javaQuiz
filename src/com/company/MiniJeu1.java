@@ -115,22 +115,23 @@ public class MiniJeu1 extends Quiz{
         rep1.setBounds(WIDTH/10*2, WIDTH/10, HEIGHT,WIDTH/12);
         rep1.setBackground(new Color(255,153,153));
         rep1.setForeground(new Color(0,153,76));
-        rep1.setFont(new Font("MV Boli",Font.PLAIN,70));
+        rep1.setFont(new Font("MV Boli",Font.PLAIN,45));
+        
 
         rep2.setBounds(WIDTH/10*2, WIDTH/10*2+20, HEIGHT,WIDTH/12);
         rep2.setBackground(new Color(255,153,153));
         rep2.setForeground(new Color(0,153,76));
-        rep2.setFont(new Font("MV Boli",Font.PLAIN,70));
+        rep2.setFont(new Font("MV Boli",Font.PLAIN,45));
 
         rep3.setBounds(WIDTH/10*2, WIDTH/10*3+40, HEIGHT,WIDTH/12);
         rep3.setBackground(new Color(255,153,153));
         rep3.setForeground(new Color(0,153,76));
-        rep3.setFont(new Font("MV Boli",Font.PLAIN,70));
+        rep3.setFont(new Font("MV Boli",Font.PLAIN,45));
 
         rep4.setBounds(WIDTH/10*2, WIDTH/10*4+60, HEIGHT,WIDTH/12);
         rep4.setBackground(new Color(255,153,153));
         rep4.setForeground(new Color(0,153,76));
-        rep4.setFont(new Font("MV Boli",Font.PLAIN,70));
+        rep4.setFont(new Font("MV Boli",Font.PLAIN,45));
 
         secondes_restantes.setBounds(WIDTH/4*3,390,300,300);
         secondes_restantes.setBackground(new Color(255,153,204));
