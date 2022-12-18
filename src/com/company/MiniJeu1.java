@@ -34,8 +34,8 @@ public class MiniJeu1 extends Quiz{
 
     MiniJeu1(String name){
         rep_correctes=0;
-        nb_quest= 5;
-        secondes=10;
+        nb_quest= 8;
+        secondes=15;
         position=0;
         tabChoix=new String[4];
 
@@ -60,7 +60,7 @@ public class MiniJeu1 extends Quiz{
         textArea.setWrapStyleWord(true);
         textArea.setBackground(new Color(255,255,102));
         textArea.setForeground(new Color(255,153,153)); //couleur texte
-        textArea.setFont(new Font("MV Boli",Font.BOLD,50)); //reglages police
+        textArea.setFont(new Font("MV Boli",Font.BOLD,40)); //reglages police
         textArea.setBorder(BorderFactory.createBevelBorder(1));  //mettre des bords
         textArea.setEditable(false); //l'utilisateur peut pas changer les tailles
 
@@ -185,7 +185,7 @@ public class MiniJeu1 extends Quiz{
         else{
             nbAleatoire = Quiz.nbAleatoire();
 
-            textField.setText("<html>" + "Question "+(position+1) + "</html>"); //passer a la question suivante
+            textField.setText("Question "+(position+1)); 
             textArea.setText(recherche_quest(nbAleatoire));
 
             tabChoix = recherche_choix(nbAleatoire);

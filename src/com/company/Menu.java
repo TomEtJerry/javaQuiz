@@ -34,14 +34,14 @@ public class Menu implements ActionListener {
 
 
         logo.setBounds(0, 0, WIDTH, HEIGHT);
-        Icon FMS = new ImageIcon(new ImageIcon("javaQuiz\\quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
+        Icon FMS = new ImageIcon(new ImageIcon("quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
         logo.setIcon(FMS); 
 
         // add the text field and button for the name
         JTextField nameField = new JTextField("Entrer un nom");
         nameField.setBounds(WIDTH/2-250, HEIGHT/4, 500, 100);
         
-    
+        
         JButton boutonA = new JButton("Quiz Java");
         boutonA.setBounds(WIDTH/2-250, HEIGHT/2+150, 240, 100);
         boutonA.setBackground(Color.CYAN);

@@ -68,7 +68,7 @@ public class Question {
         questions[11] = new Question(12, 1, "Mettre en place un mécanisme de notification entre différents objets", 
                 new String []{"créer plusieurs instances d'une classe", "créer une seule instance d'une classe", "Mettre en place un mécanisme de notification entre différents objets", "créer une instance d'une classe en fonction d'un paramètre"},"Quel est le but du pattern Observer en Java ?");
 
-        questions[12] = new Question(13, 1, "Déclarer une classe comme étant une sous-classe d'une autre classe", 
+        questions[12] = new Question(13, 1, "déclarer une classe comme étant une sous-classe d'une autre classe", 
                 new String []{"Déclarer une interface", "déclarer une classe comme étant une sous-classe d'une autre classe", "déclarer une exception", "déclarer une variable d'instance comme 'final'"},"Quel est le rôle du mot-clé 'extends' en Java ?");   
 
         questions[13] = new Question(14, 1, "Variables locales", 
@@ -80,7 +80,7 @@ public class Question {
         questions[15] = new Question(16, 1, "Break",
                 new String []{"Continue", "Break", "Exit", "Stop"},"Quel est le mot-clé utilisé pour arrêter une boucle en Java? ");
 
-        questions[16] = new Question(17, 1, "include Example",
+        questions[16] = new Question(17, 1, "import Example",
                 new String []{"import Example", "include Example", "require Example", "using Example"},"Quelle est la bonne syntaxe pour importer une classe nommée 'Example' dans un fichier Java? ");
 
         questions[17] = new Question(18, 1, "Class A extends B",
@@ -103,7 +103,29 @@ public class Question {
                 
         questions[23] = new Question(24, 1, "une classe mère",
                 new String []{"une classe main", "une classe mère", "une classe public", "une classe du langage Java"},"Qu'est-ce qu'une 'super classe' ? ");
-      
+        questions[24] = new Question(1, 2, "Usagi Tsukino", 
+                new String []{"Usagi Tsukinoooooh", "Usagi Tsukin-water", "Usagi Tsukinau", "Usagi Tsukino"},"Quel est le nom de l'héroïne de l'animé 'Sailor Moon'?");
+        questions[25] = new Question(2, 2, "Naruto Uzumaki", 
+                new String []{"Naruto Uzumaki", "Norauto Uzumaki", "Naruto Uzumakiki", "Minato Namikaze"},"Quel est le nom du héros de l'animé 'Naruto'?");
+        questions[26] = new Question(3, 2, "Rurouni Kenshin", 
+                new String []{"Rurounii Kenshin impact", "Afro Samurai", "Berserk", "Rurouni Kenshin"},"Quel est le titre de l'animé avec Kenshin Himura ?");
+        questions[27] = new Question(4, 2, "One Piece", 
+                new String []{"Bleach", "Prout", "Le Zoo", "One Piece"},"Quel est le titre de l'animé avec Monkey D. Luffy ?");
+        questions[28] = new Question(5, 2, "Fairy Tail", 
+                new String []{"One Piece", "Fé attention", "Chien de Squezzie", "Fairy Tail"},"Quel est le titre de l'animé avec Natsu Dragneel ?"); 
+        questions[29] = new Question(6, 2, "Food Wars!", 
+                new String []{"French Wars", "Star Wars", "Sexe Wars", "Food Wars!"},"Quel animé avec Soma Yukihira, un jeune chef maitrisant le francais?");
+        questions[30] = new Question(7, 2, "Your Lie in April", 
+                new String []{"Your truth in April", "Your Lie in April", "Your lie in 23/03/2034", "Your lit in Nombril"},"Quel est le titre de l'animé avec Kousei Arima ?");
+        questions[31] = new Question(8, 2, "The Rising of the Shield Hero", 
+                new String []{"Sword Art Online", "The Rising of the Shield Hero", "My Hero Academia", "Jojo's Bizarre Adventure"},"Quel est le titre de l'animé avec Kimimaro Yoga ?");
+        questions[32] = new Question(9, 2, "Parasyte", 
+                new String []{"Paratonerre", "Akame ga Kill", "Pare-balle", "Parasyte"},"Quel est le titre de l'animé avec Shinichi Izumi ?"); 
+        questions[33] = new Question(10, 2, "Death Note", 
+                new String []{"Mi-death-life Note", "Erased", "Death Note", "Life Note"},"Quel est le titre de l'animé avec Light Yagami?");
+        questions[34] =new Question(11, 2, "One Punch Man", 
+                new String []{"Death Note", "One Punch Man", "Two Punch Man", "One and a half Punch Man"},"Quel est le titre de l'animé avec Saitama?");
+
             
         return questions[nbr_aleatoire];
 
