@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Objects;
+import com.company.qmemory;
 
 public class MiniJeu1 extends Quiz{
     Toolkit toolkit = Toolkit.getDefaultToolkit();
@@ -291,6 +292,8 @@ public class MiniJeu1 extends Quiz{
         temps.setVisible(false);
         textArea.setVisible(false);
         boutonMenu.setVisible(true);
+
+        qmemory.intMem.clear();
 
         resultat= (int)((rep_correctes/(double)nb_quest)*100);
         textField.setText("RESULTATS !");

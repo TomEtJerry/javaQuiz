@@ -3,6 +3,7 @@ package com.company;
 import java.awt.event.*;
 import javax.swing.*;
 import java.util.concurrent.ThreadLocalRandom;
+import com.company.qmemory;
 
 public abstract class Quiz implements ActionListener{ // class Quiz
 
@@ -45,20 +46,28 @@ public abstract class Quiz implements ActionListener{ // class Quiz
 
 
 
-    //on creer nb aleatoire, puis on cherche la ligne du fichier correspondante
     //une dans question et l'autre dans choix, qui est sous la forme: bonneRep rep1 rep2 rep 3 rep4
     public static int nbAleatoire(int theme){
+        int ret;
 
         ThreadLocalRandom tlr = ThreadLocalRandom.current(); //chercher question aleatoire
         if(theme == 1){
-            return tlr.nextInt(0, 23 + 1); //donne num aleatoire entre 0 et 23
+            do{
+                ret = tlr.nextInt(0, 23 + 1); //donne num aleatoire entre 0 et 23
+            }while(qmemory.intMem.contains(ret));
         }
         else if(theme == 2){
-            return tlr.nextInt(24, 34 + 1); //donne num aleatoire entre 0 et 34
+            do{
+                ret = tlr.nextInt(24, 34 + 1); //donne num aleatoire entre 0 et 34
+            }while(qmemory.intMem.contains(ret));
         }
         else{
             return 0;
         }
+        qmemory.intMem.add(ret);
+        System.out.println(ret);
+        System.out.println(qmemory.intMem);
+        return ret;
         
     }
 
