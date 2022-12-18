@@ -41,7 +41,7 @@ public class Question {
         questions[2] = new Question(3, 1, "permet de garantir un accès exclusif à une portion de code pour un seul thread", 
                 new String []{"déclarer une constante", "déclarer une variable", "déclarer une méthode comme abstraite", "permet de garantir un accès exclusif à une portion de code pour un seul thread"},"Quel est le rôle du mot-clé 'synchronized' en Java ?");
 
-        questions[3] = new Question(4, 1, "Un modèle, créer des objets avec des propriétés et des comportements communs",
+        questions[3] = new Question(4, 1, "Un modèle, créer des objets et des comportements communs",
                 new String []{"Un type de données qui permet de stocker des informations", "Un modèle, créer des objets et des comportements communs", "Un fichier qui contient du code Java", "un package"},"Qu'est-ce qu'une classe en Java ? ");
 
         questions[4] = new Question(5, 1, "une erreur",
@@ -59,7 +59,7 @@ public class Question {
         questions[8] =new Question(9, 1, "Comparer deux objets en vérifiant leur adresse mémoire", 
                 new String []{"Comparer deux objets en vérifiant leur contenu", "Comparer deux objets en vérifiant leur adresse mémoire", "convertir un objet en chaîne de caractères", "convertir un objet en type primitif"},"Qu'est-ce que la méthode 'equals()' en Java ?");
 
-        questions[9] =new Question(10, 1, "Créer une seule instance d'une classe", 
+        questions[9] =new Question(10, 1, "créer une seule instance d'une classe", 
                 new String []{"créer plusieurs instances d'une classe", "créer une seule instance d'une classe", "Créer une instance d'une classe à chaque appel de méthode", "créer une instance d'une classe en fonction d'un paramètre"},"Quel est le but du pattern Singleton en Java ?");
 
         questions[10] = new Question(11, 1, "Renvoie une chaîne de caractères représentant l'objet", 
