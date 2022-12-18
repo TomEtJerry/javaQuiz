@@ -50,7 +50,7 @@ public class Question {
         questions[5] = new Question(6, 1, "Valeur stockée dans un espace mémoire dont la taille dépend du type", 
                 new String []{"des objets", "des nombres entiers", "des nombres flottants", "Valeur stockée dans un espace mémoire dont la taille dépend du type"},"Qu'est-ce que les variables primitives en Java ?");
 
-        questions[6] =new Question(7, 1, "Déclarer une constante:", 
+        questions[6] =new Question(7, 1, "déclarer une constante:", 
                 new String []{"Déclarer une constante", "déclarer une variable", "déclarer une méthode", "déclarer une classe"},"Quel est le rôle du mot-clé 'final' en Java ?");
 
         questions[7] =new Question(8, 1, "l'héritage", 
