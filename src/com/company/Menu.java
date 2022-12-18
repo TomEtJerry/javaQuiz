@@ -78,7 +78,7 @@ public class Menu implements ActionListener {
         
     
         logo.setBounds(0, 0, WIDTH, HEIGHT);
-        Icon FMS = new ImageIcon(new ImageIcon("quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
+        Icon FMS = new ImageIcon(new ImageIcon("javaQuiz\\quizLogo.jpg").getImage().getScaledInstance(WIDTH, HEIGHT, Image.SCALE_DEFAULT));
         logo.setIcon(FMS); 
         
         
