@@ -1,6 +1,7 @@
 package com.company;
 
 public class Joueur extends MiniJeu1 {
+
     protected String nom;
     protected int id=0;
     protected int nb_vie;
@@ -8,7 +9,6 @@ public class Joueur extends MiniJeu1 {
     protected int classement;
     protected int choix;
     protected int score;
-
 
     Joueur(){
         id++;
@@ -49,3 +49,4 @@ public class Joueur extends MiniJeu1 {
 
     //supprimer joueur
 }
+

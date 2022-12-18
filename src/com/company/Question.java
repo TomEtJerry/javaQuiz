@@ -100,6 +100,7 @@ public class Question {
 
         questions[22] = new Question(23, 1, "Un modèle qui permet de créer des objets avec des propriétés et des comportements communs",
                 new String []{"Un type de données qui permet de stocker des informations", "Un modèle qui permet de créer des objets avec des propriétés et des comportements communs", "Un fichier qui contient du code Java", "n package qui regroupe des classes et des interfaces"},"Qu'est-ce qu'une classe en Java ? ");
+                
         questions[23] = new Question(24, 1, "une classe mère",
                 new String []{"une classe main", "une classe mère", "une classe public", "une classe du langage Java"},"Qu'est-ce qu'une 'super classe' ? ");
       
